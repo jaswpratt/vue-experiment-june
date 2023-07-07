@@ -43,8 +43,6 @@
    </target>
 	
    <target name="war" depends="clean,compile" >
-   	<echo>"web.xml ===> ${basedir}/web/WEB-INF/web.xml"</echo>
-   	<echo>"Base dir web ===> ${basedir}/web"</echo>
       <mkdir dir="${project.dir.dist}"/>
       <war destfile="${project.dir.dist}/${project.app.warname}" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
          <exclude name="WEB-INF/**" />
